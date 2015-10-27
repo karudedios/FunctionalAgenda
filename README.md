@@ -13,13 +13,12 @@ Feel free! The more the merrier, just fork and submit your pull-request.
 * Steps
   1. Clone in `/some-directory/`
   2. Run `npm install`
-  3. Run `jspm install` **TODO**
-  3. Run `gulp install` **TODO**
-  3. Run `gulp watch` **TODO**
-  4. Run `npm app.js` **TODO**
-  5. Enter `localhost:3000` in your favorite browser **TODO**
-  6. ??? ~~**TODO**~~
-  7. Profit ~~**TODO**~~
+  3. Run `jspm install`
+  4. Run `gulp watch`
+  5. Run `babel-node app.js`
+  6. Enter `localhost:3000` in your favorite browser
+  7. ???
+  8. Profit
 
 
 **For more information, please consult the [Wiki](https://github.com/karudedios/FunctionalAgenda/wiki)**.
