@@ -1,0 +1,43 @@
+{
+  "name": "functional-agenda",
+  "version": "0.0.1",
+  "description": " Test application built for test FunctionalProgrammingUtilities and FunctionalProgramming.js",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "functional-programming-utilities": "^0.0.3",
+    "jspm": "^0.16.13"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "body-parser": "^1.14.1",
+    "coveralls": "^2.11.4",
+    "express": "^4.13.3",
+    "isparta": "^3.1.0",
+    "jshint": "^2.8.0",
+    "jspm": "^0.16.13",
+    "mocha": "^2.3.3",
+    "sequelize": "^3.12.2"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel/register --colors --reporter spec",
+    "cover": "babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report lcovonly -- --colors --reporter spec",
+    "lint": "npm run lint:lib && npm run lint:src&& npm run lint:test",
+    "lint:lib": "jshint lib/",
+    "lint:src": "jshint src/",
+    "lint:test": "jshint test/",
+    "compile": "npm run compile:lib && npm run compile:src",
+    "compile:lib": "babel -d compiled/lib/ lib/",
+    "compile:src": "babel -d compiled/dist/ src/",
+    "prepublish": "npm run compile",
+    "build": "npm run lint && npm run cover",
+    "post-build": "rm -rf coverage/"
+  },
+  "keywords": [
+    "functional-programming"
+  ],
+  "author": "Carlos de Dios <c.dedios@outlook.com>",
+  "license": "MIT"
+}

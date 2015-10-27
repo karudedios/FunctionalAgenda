@@ -1,0 +1,11 @@
+install:
+  - npm install
+script:
+  - npm run build
+branches:
+  only:
+    - master
+    - develop
+after_script:
+  - cat ./coverage/lcov.info | coveralls
+  - npm run post-build
