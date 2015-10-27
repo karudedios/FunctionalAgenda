@@ -1,4 +1,5 @@
 .html
 .css
+process.env
 compiled/
 node_modules/
