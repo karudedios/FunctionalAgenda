@@ -3,3 +3,4 @@
 process.env
 compiled/
 node_modules/
+jspm_packages/

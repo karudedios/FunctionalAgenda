@@ -4,7 +4,8 @@
   "description": " Test application built for test FunctionalProgrammingUtilities and FunctionalProgramming.js",
   "main": "app.js",
   "directories": {
-    "test": "test"
+    "test": "test",
+    "packages": "jspm_packages"
   },
   "dependencies": {
     "functional-programming-utilities": "^0.0.3",
@@ -48,5 +49,16 @@
     "functional-programming"
   ],
   "author": "Carlos de Dios <c.dedios@outlook.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "jspm": {
+    "directories": {
+      "test": "test"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
 }
