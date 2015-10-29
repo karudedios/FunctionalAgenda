@@ -4,15 +4,19 @@ import env from 'node-env-file';
 
 let path = `${__dirname}/process.env`;
 
-exists(path, () => {
-  env(path);
-});
+exists(path, () => env(path));
 
 let app = express();
 let router = express.Router();
 
-app.use(router);
+app
+  /* public folder serving */
+  .use('/public', express.static(`${__dirname}/compiled`))
 
-app.get('/', (req, res) => res.sendFile(`${__dirname}/compiled/index.html`));
+  /* Main html template serving */
+  .get('/', (req, res) => res.sendFile(`${__dirname}/compiled/index.html`))
+
+  /* attaching `router` to app */
+  .use(router);
 
 app.listen(+process.env.PORT || 3000);
