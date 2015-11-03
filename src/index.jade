@@ -2,5 +2,19 @@ html
   head
     title Test App
     link(rel="stylesheet" href="/public/style/app.css")
-  body
-    h1 Hello World
+  body(aurelia-app='app')
+    div.master
+      header
+        h1 Title Goes Here
+
+      div.container(aurelia-view)
+
+      footer
+        h3 Footer goes here
+
+      script(src='/public/system.js')
+
+      script(src='/public/config.js')
+
+      script.
+        System.import('aurelia-bootstrapper');

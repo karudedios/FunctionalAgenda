@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.master {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.master {
+  header {
+    width: 100%;
+    background: red;
+    box-sizing: border-box;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  footer {
+    width: 100%;
+    background: blue;
+    box-sizing: border-box;
+  }
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
